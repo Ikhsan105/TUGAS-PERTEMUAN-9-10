@@ -28,7 +28,7 @@ CSV_PATH = os.path.join(BASE_DIR, "data", "data_dummy.csv")
 
 # --- Fungsi-fungsi untuk Menu ---
 
-def muat_data_dummy(rekap):
+def muat_data_CSV(rekap):
     """Memuat data dari file CSV dan mengisi ke objek RekapKelas."""
     if not os.path.exists(CSV_PATH):
         print(f"File CSV tidak ditemukan di {CSV_PATH}")
@@ -128,7 +128,7 @@ def main_menu():
         pilihan = input("Pilih menu (1-7): ")
         
         if pilihan == '1':
-            muat_data_dummy(rekap_data)
+            muat_data_CSV(rekap_data)
         elif pilihan == '2':
             tambah_mahasiswa_menu(rekap_data)
         elif pilihan == '3':
